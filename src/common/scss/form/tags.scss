@@ -1,0 +1,32 @@
+.b-tag {
+  display: inline-block;
+  padding: 4px 10px;
+  background: #CBCBCB;
+  color: #515151;
+  border-radius: 4px;
+  font-weight: normal;
+  @include font-size(10);
+
+  &.b-tag-moored {
+    color: #FFF;
+    background: #929292;
+  }
+
+  @at-root .b-input & {
+    height: rem-calc(16);
+    line-height: rem-calc(16);
+    padding:0 5px;
+    color:$color-gray-dark;
+    border-radius: 1px;
+  }
+
+  @at-root .b-input .b-tag .fa {
+    position: static;
+    padding: 0 0 0 10px;
+    background: none;
+    border: none;
+    margin: 0;
+    line-height: inherit;
+    height: inherit;
+  }
+}

@@ -1,0 +1,96 @@
+/* Select */
+.b-select {
+    position: relative;
+
+    display: inline-block;
+    min-width: 220px;
+
+    vertical-align: middle;
+
+    & .fa {
+        @extend .e-fa;
+
+        //line-height: 19px;
+    }
+
+    & .fa-text {
+        @extend .e-fa-text;
+    }
+}
+
+    .b-select__value {
+        @extend .e-input;
+
+        line-height: 23px;
+    }
+
+    .b-select__placeholder {
+        color: #bfbfbf;
+        font-style: italic;
+        font-weight: normal;
+    }
+
+    .b-select__list {
+        position: absolute;
+        z-index: 100;
+        right: 0;
+        top: 26px;
+
+        display: none;
+        min-width: 100%;
+        box-sizing: border-box;
+
+        font: 12px/24px $font-base;
+
+        border: 1px solid #bfbfbf;
+        background: #fff;
+    }
+
+        .b-select__list_open {
+            display: block;
+        }
+
+    .b-select__item {
+        position: relative;
+
+        padding: 0 5px 0 20px;
+        box-sizing: border-box;
+
+        cursor: pointer;
+        line-height: 24px;
+
+        &:hover {
+            color: #fff;
+
+            background: #384580;
+        }
+    }
+
+        .b-select__item_placeholder {
+            color: #bfbfbf;
+        }
+
+        .b-select__item_active {
+            color: #404040;
+            font-weight: 700;
+
+            background: #E1E0F9;
+
+            &:before {
+                content: '\f00c';
+                position: absolute;
+                top: 50%;
+                left: 4px;
+
+                display: block;
+                width: 16px;
+                height: 16px;
+                margin: -9px 0 0 0;
+
+                font: normal normal normal 12px/1.4 FontAwesome;
+                text-rendering: auto;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+            }
+        }
+/* Select */

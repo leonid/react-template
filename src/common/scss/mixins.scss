@@ -1,0 +1,26 @@
+@mixin m-clear {
+    &::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin font-size($size-value: 16) {
+  font-size: ($size-value) + px;
+  font-size: ($size-value * .1) + rem;
+}
+
+@function rem-calc($values) {
+  $max: length($values);
+  $rem-values: '';
+  @for $i from 1 through $max {
+    $value: (nth($values, $i));
+    $value: $value / ($value * 0 + 1);
+    $rem-values: #{$rem-values + $value * .1}rem;
+    @if $i < $max {
+      $rem-values: #{$rem-values + " "};
+    }
+  }
+  @return $rem-values;
+}

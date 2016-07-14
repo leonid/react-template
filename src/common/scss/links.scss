@@ -1,0 +1,84 @@
+.b-link {
+  $base-color: #485993; //#0056AB
+  $light-color: #006CB7;
+  $rosy-color: #B85666;
+
+  color: $base-color;
+  text-decoration: none;
+
+  &:hover,
+  &--hovered {
+    text-decoration: underline;
+    color:lighten( $base-color, 10% );
+  }
+
+  &:visited {
+    color:lighten( $base-color, 20% );
+  }
+
+  &:active {
+    color:darken( $base-color, 20% );
+  }
+
+  &:not([href]):hover {
+    text-decoration: none;
+  }
+
+  &__action {
+    color: $base-color;
+    border-bottom:1px dashed #{$base-color};
+    text-decoration: none;
+    cursor: pointer;
+    white-space: nowrap;
+
+    & .fa {
+      margin: 0 2px 0 0;
+    }
+
+    &:hover,
+    &--small:hover {
+      text-decoration: none;
+      border-bottom: none;
+      cursor: pointer;
+    }
+
+    &--small {
+      color: $light-color;
+      border-bottom: 1px dashed #{$light-color};
+      text-decoration: none;
+    }
+  }
+
+  &__couple {
+    color: $rosy-color;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__icon {
+    font-size: 14px;
+    color: $light-color;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__button {
+    font-size: 12px;
+    color: #fff;
+    text-decoration: none;
+    background: #006CBA;
+    border-radius: 3px;
+    padding: 6px 20px;
+
+    &:hover {
+      cursor: pointer;
+      color: darken( #FFF, 20% );
+    }
+  }
+}

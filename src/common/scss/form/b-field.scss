@@ -1,0 +1,186 @@
+/* Field */
+.b-field {
+    @include m-clear;
+}
+
+.b-field_tags {
+    & .b-input,
+    & .b-select {
+        display: inline-block;
+
+        width: 220px;
+
+        margin: 0 0 0 145px;
+    }
+}
+
+.b-field_float {
+    & .b-label {
+        display: block;
+
+        width: 135px;
+
+        float: left;
+    }
+
+    & .b-input,
+    & .b-select {
+        display: block;
+
+        margin: 0 0 0 145px;
+    }
+}
+
+.b-field_error {
+    & .fa,
+    & .b-input__field {
+        border: 1px solid #b85666;
+    }
+}
+
+.b-field_bold {
+    & .b-input__field {
+        font-weight: 700;
+    }
+}
+
+.b-field_disabled {
+    opacity: .5;
+
+    .fa {
+        cursor: default;
+    }
+
+    .fa,
+    & .b-input__field {
+        border: 1px solid #7f7f7f;
+    }
+}
+
+.b-field_icon {
+    .b-input__field {
+        padding: 0 30px 0 5px;
+    }
+}
+
+.b-field_required {
+    .b-label__label {
+        &::after {
+            position: absolute;
+            top: 1px;
+            right: -6px;
+
+            color: #b6040b;
+
+            font-weight: 700;
+
+            content: '*';
+        }
+    }
+}
+
+.b-field_right {
+    & .b-input__field {
+        text-align: right;
+    }
+}
+
+.b-field_dropdown {
+    & .fa {
+        //line-height: 19px;
+    }
+
+    .b-input__field,
+    & .b-select__value {
+        padding: 0 25px 0 5px;
+    }
+}
+
+.b-field_currency {
+    .b-select {
+        width: 85px;
+        min-width: 85px;
+    }
+
+    & .b-select__value {
+        padding: 0 24px 0 5px;
+    }
+
+    & .b-select__item {
+        padding: 0 5px 0 20px;
+    }
+}
+
+.b-field_date {
+    @extend .b-field_bold;
+
+    .b-input {
+        display: inline-block;
+
+        width: 105px;
+        min-width: 105px;
+    }
+
+    & .b-input__field {
+        padding: 0 25px 0 5px;
+    }
+}
+
+.b-field_32 {
+    &.b-field_icon {
+        & .b-input__field {
+            padding: 0 37px 0 5px;
+        }
+    }
+
+    &.b-field_dropdown {
+        .fa {
+            line-height: 25px;
+        }
+
+        .b-input__field {
+            padding: 0 30px 0 5px;
+        }
+    }
+
+    &.b-field_date {
+        & .b-input {
+            width: 115px;
+        }
+
+        & .b-input__field {
+            padding: 0 37px 0 5px;
+        }
+    }
+
+    & .b-label__label {
+        font-size: 14px;
+    }
+
+    & .b-input__field,
+    & .b-select__value {
+        height: 32px;
+
+        font-size: 14px;
+
+        line-height: 32px;
+    }
+
+    .fa {
+        height: 32px;
+
+        padding: 0 8px;
+
+        font-size: 16px;
+
+        line-height: 30px;
+    }
+
+    & .b-select__list {
+        top: 35px;
+
+        font-size: 14px;
+    }
+}
+
+/* Field */

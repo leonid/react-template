@@ -1,0 +1,49 @@
+/* Input */
+.b-input {
+    position: relative;
+    line-height: rem-calc(24);
+
+    //display: inline-block;
+    //min-width: 220px;
+    flex: 1;
+
+    & .fa {
+        @extend .e-fa;
+    }
+
+    & .fa-text {
+        @extend .e-fa-text;
+    }
+
+    &__field {
+        @extend .e-input;
+
+        &_invalid,
+        :invalid {
+            border-color: #b85666;
+        }
+
+        :required::before {
+            content: '*';
+            color:red;
+            @include font-size(10);
+        }
+
+        @at-root .b-input :disabled {
+            color: lighten($color-gray, 25%);
+            border-color: lighten($color-gray, 25%);
+            opacity: .7;
+
+            + .fa {
+                opacity: .3;
+                cursor: default;
+            }
+        }
+    }
+
+    input[date] {
+        font-weight: bold;
+    }
+
+}
+/* Input */

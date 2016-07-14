@@ -1,0 +1,26 @@
+.b-breadcrumbs {
+    height: 35px;
+    padding: 0 35px;
+    margin-bottom: 10px;
+    display: flex;
+
+    line-height: 35px;
+
+    background: #F5F5F5;
+
+    &__separator {
+        margin: 0 6px;
+    }
+
+    & .b-link {
+        color: #808080;
+    }
+
+    &__actions {
+        margin-left: auto;
+
+        & .b-link__action {
+            margin: 0 6px 0 0;
+        }
+    }
+}

@@ -1,0 +1,144 @@
+// Columns by percents, parts, with gutter, borders and separators
+$grid-columns: 10 !default;
+$grid-separator-width: 1px !default;
+$grid-gutter: 10px !default;
+
+$border-color: #b2b2b2;
+
+
+.g-grid {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: stretch;
+  flex:1;
+
+  &_top {
+    align-items: flex-start;
+  }
+
+  &_bottom {
+    align-items: flex-end;
+  }
+
+  &_middle {
+    align-items: center;
+  }
+
+  &_justify {
+    justify-content: center;
+  }
+
+}
+
+.g-grid__cell {
+  flex: 1;
+
+  &_top {
+    align-self: flex-start;
+  }
+
+  &_bottom {
+    align-self: flex-end;
+  }
+
+  &_middle {
+    align-self: center;
+  }
+
+  &_autoSize {
+    flex: none;
+  }
+
+  &_right {
+    margin-left: auto;
+  }
+
+  &_border {
+    border: 1px solid #cbcbcb;
+  }
+}
+
+.g-grid_flex_cells > .g-grid__cell {
+  display: flex;
+}
+
+.g-grid_fit {
+  flex: 1;
+}
+
+.g-grid_full {
+  flex: 0 0 100%;
+}
+
+.g-grid_1of2 {
+  flex: 0 0 50%;
+}
+
+.g-grid_1of3 {
+  //width:33%;
+  flex: 0 0 33.3333%;
+}
+
+.g-grid_1of4 {
+  flex: 0 0 25%;
+}
+
+.g-grid_gutters {
+  //margin: -$grid-gutter 0 $grid-gutter #{-$grid-gutter};
+
+  &_outer {
+    //padding: $grid-gutter $grid-gutter 0;
+    padding: $grid-gutter $grid-gutter 0;
+  }
+
+  &_bottom {
+    margin-bottom: $grid-gutter;
+  }
+
+  //&_separated{
+  //  display: flex;
+  //  align-items: stretch;
+  //
+  //  &::after {
+  //    margin-left: -($grid-gutter/2 - 1);
+  //    border-left: 1px solid $border-color;
+  //    padding-right: $grid-gutter/2 - 1;
+  //    content: '';
+  //
+  //    border-right: 1px solid #003A91;
+  //    right: 0;
+  //    height: 100%;
+  //    top: 0;
+  //    position: absolute;
+  //  }
+  //}
+
+  > .g-grid__cell {
+    padding: 0 0 0 $grid-gutter;
+
+    &:first-of-type {
+      padding-left: 0;
+      padding-right: ($grid-gutter/2);
+    }
+
+    &:nth-of-type(2) {
+      padding-left: ($grid-gutter/2);
+    }
+  }
+
+  > .g-grid_1of4 {
+      flex: 0 0 25%;
+    }
+
+  > .g-grid_1of3 {
+      flex: 0 0 (100%/3);
+    }
+
+  > .g-grid_1of2 {
+      flex: 0 0 50%;
+    }
+
+}

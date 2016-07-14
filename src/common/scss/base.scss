@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+@import "reset";
+@import "variables";
+@import "mixins";
+@import "typography";
+@import "sizes";
+@import "colors";
+@import "tables";
+@import "media-screen";
+@import "grid";
+@import 'layout';
+@import "form";
+@import "icons";
+@import "links";
+@import "modals";
+
+/* Базовые стили */
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  position: relative;
+
+  height: 100%;
+
+  font: 12px/1.4 $font-base;
+}

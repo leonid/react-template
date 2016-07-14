@@ -1,0 +1,55 @@
+@import '../../common/scss/variables';
+
+.b-header {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    min-width: 1340px;
+
+    height: 55px;
+    padding: 0 0 0 62px;
+
+    white-space: nowrap;
+    background: #fff;
+
+    &__logo {
+        position: absolute;
+        top: 7px;
+        bottom: 0;
+        left: 11px;
+    }
+
+    &__services {
+        margin-left: auto;
+        height: 52px;
+        text-align: right;
+    }
+
+    // TODO: In future keep child blocks classes separately and import in the beginning of this file
+    &__user-info,
+    &__alerts,
+    &__bin,
+    &__notifications {
+        display: inline-block;
+        margin: 15px 12px;
+        text-align: left;
+    }
+
+    &::after {
+        content: '';
+        clear: both;
+        background: #003a91;
+        border-radius: 2px;
+        position: absolute;
+        border:1px solid #003a91;
+        height: 1px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: auto;
+        z-index: -1;
+    }
+}

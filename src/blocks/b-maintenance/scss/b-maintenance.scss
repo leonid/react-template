@@ -1,0 +1,26 @@
+.b-maintenance {
+  background: #002E95;
+  color: #CBCBCB;
+  text-align:center;
+  line-height: 28px;
+  font-size: 13px;
+  position: fixed;
+  width: 100%;
+  top: 55px;
+
+  &-closable {
+    background: #FF4241;
+    color: #FFF;
+  }
+
+  &--remove {
+    position: absolute;
+    right: 8px;
+    color:#FFF;
+    font-size: 14px;
+  }
+
+  & + & {
+    margin-top: 28px;
+  }
+}

@@ -1,0 +1,51 @@
+.b-header {
+  &__user-info {
+    position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: 20px;
+  }
+
+  &__user-name:hover {
+    cursor: pointer;
+
+    > .b-header__user-actions {
+      display: block;
+    }
+  }
+
+  &__user-actions {
+    background: #FFF;
+    border: 1px solid #063D8F;
+    box-shadow: #888888 0 4px 4px;
+    padding: 8px 5px;
+    display: none;
+    position: absolute;
+    z-index: 10;
+    min-width: 169px;
+    right: 0;
+
+    &--link {
+      display: block;
+      margin: 0px 0 6px;
+      padding: 10px 5px;
+      cursor: pointer;
+      text-decoration: none;
+      color: #515151;
+    }
+
+    &--link:hover {
+      background: #384580;
+      color:#FFF;
+    }
+
+    &--link:first-child {
+      margin-top: 0;
+    }
+
+    &--link:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

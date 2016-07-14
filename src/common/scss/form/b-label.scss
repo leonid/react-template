@@ -1,0 +1,30 @@
+/* Label */
+.b-label {
+    position: relative;
+
+    display: inline-block;
+    margin: 0 10px 0 auto;
+
+    color: #404040;
+    font-weight: 700;
+    text-align: right;
+    vertical-align: middle;
+    align-self: center;
+    line-height: rem-calc(24);
+
+    @extend .e-user-select;
+}
+
+    .b-label_checkbox {
+        margin: 0;
+
+        & .b-label__label {
+            padding: 0;
+        }
+    }
+
+    .b-label__label {
+        position: relative;
+        line-height: 1;
+    }
+/* Label */

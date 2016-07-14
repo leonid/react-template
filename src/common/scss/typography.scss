@@ -1,0 +1,123 @@
+@import 'variables';
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    line-height: $base-line-height;
+}
+
+p {
+    //font-size: $base-font-size;
+    margin-bottom: $vertical-rhythm;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+h1,
+.g-h1 {
+    @include font-size(20);
+    margin-bottom: $vertical-rhythm;
+    font-weight: bold;
+    color: #404040;
+
+    &__action--primary {
+        @include font-size(14);
+        color: #006CB7;
+        padding: 0 0 0 47px;
+        text-decoration: none;
+    }
+    &__action--secondary {
+        float: right;
+        @include font-size(14);
+        color: #515151;
+    }
+
+    &.g-h1-title {
+        color: #485993;
+    }
+}
+
+h2,
+.g-h2 {
+    @include font-size(18);
+    margin-bottom: $vertical-rhythm;
+    color: #404040;
+
+    font-weight: bold;
+}
+
+h3,
+.g-h3 {
+    font-weight: bold;
+    @include font-size(16);
+    margin-bottom: $vertical-rhythm;
+}
+
+h4,
+.g-h4 {
+    font-weight: bold;
+
+    @include font-size(14);
+
+    margin-bottom: rem-calc(9px);
+
+}
+
+a {
+    color: $link-color;
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: none;
+    }
+    &:visited {
+        color: $link-color-visited;
+    }
+}
+
+strong {
+    font-weight: bold;
+}
+
+.g-h-title {
+    color: #485993;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 8px;
+
+    &__crumb {
+        font-weight: normal;
+        margin-left: 27px;
+
+        &::before {
+            content: '\2190';
+
+            margin: 0 3px 0 -20px;
+            color: #BFC5D7;
+            position: absolute;
+        }
+    }
+}
+
+.b-num {
+    background: #AAA;
+    border-radius: 3px;
+    border: 1px solid #929292;
+    padding: 2px 8px 3px;
+    color: #000;
+
+    &--inverse {
+        color: #FFF;
+    }
+}
+
+.t-hr {
+    height: 1px;
+    background: #003a91;
+    border: 0;
+    margin: 0;
+}

@@ -1,0 +1,44 @@
+/* Checkbox */
+.b-checkbox {
+    display: inline-block;
+
+    .b-label__label {
+        font-size: 12px;
+        line-height: 16px;
+        font-weight: normal;
+    }
+
+    input[type="checkbox"] {
+        display: none;
+
+        + .b-label__label {
+            display: inline-block;
+
+            cursor: pointer;
+            vertical-align: middle;
+        }
+
+        + .b-label__label::before {
+            display: inline-block;
+            width: 19px;
+            height: 16px;
+            margin: 0 2px 0 0;
+            //background: url('/common/img/icons/checkbox.svg') no-repeat 0 0;
+            content: '';
+            vertical-align: top;
+        }
+    }
+
+    input[type="checkbox"]:checked + .b-label__label::before {
+        background-position: 0 -19px;
+    }
+}
+
+    .b-checkbox_disabled {
+        opacity: .5;
+
+        input[type="checkbox"] + label {
+            cursor: default;
+        }
+    }
+/* Checkbox */

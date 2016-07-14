@@ -1,0 +1,84 @@
+/* Button */
+.b-button {
+    position: relative;
+
+    display: inline-block;
+    height: 34px;
+    padding: 0 38px;
+    box-sizing: border-box;
+
+    color: #333;
+    cursor: pointer;
+    font: 700 16px/34px $font-base;
+
+    border-radius: 3px;
+    border: 1px solid #7e7e7e;
+    box-shadow: 0 1px 1px #7f7f7f;
+
+    background: #cccccc;
+    background: -moz-linear-gradient(top, #cccccc 0%, #999999 80%, #dddddd 100%);
+    background: -webkit-linear-gradient(top, #cccccc 0%, #999999 80%, #dddddd 100%);
+    background: linear-gradient(to bottom, #cccccc 0%, #999999 80%, #dddddd 100%);
+
+    transition: all 0.3s ease-in-out;
+
+    @extend .e-user-select;
+
+    &:hover {
+        box-shadow: none;
+        background-color: invert($color-gray);
+    }
+
+    &_file {
+        height: 24px;
+        padding: 0 20px;
+
+        color: #404040;
+        font-size: 12px;
+        line-height: 24px;
+
+        border-radius: 1px;
+        box-shadow: none;
+
+        background: #ffffff;
+        background: -moz-linear-gradient(top, #ffffff 0%, #e6e6e6 100%);
+        background: -webkit-linear-gradient(top, #ffffff 0%, #e6e6e6 100%);
+        background: linear-gradient(to bottom, #ffffff 0%, #e6e6e6 100%);
+    }
+
+    &_flat {
+        background: #f1f1f1;
+        border-color: #7f7f7f;
+        padding: rem-calc(0 16);
+        font-weight: normal;
+        box-shadow: none;
+
+        border-radius: 2px;
+    }
+
+    &_medium {
+        @include font-size(14);
+        line-height: rem-calc(26);
+        height: rem-calc(26);
+    }
+
+    &_small {
+        @include font-size(12);
+        line-height: rem-calc(18);
+        height: rem-calc(18);
+    }
+
+    &_disabled {
+        cursor: default;
+        color: #bfbfbf;
+
+        box-shadow: none;
+        border: 1px solid #bfbfbf;
+
+        background: #ffffff;
+        background: -moz-linear-gradient(top, #ffffff 0%, #dddddd 100%);
+        background: -webkit-linear-gradient(top, #ffffff 0%, #dddddd 100%);
+        background: linear-gradient(to bottom, #ffffff 0%, #dddddd 100%);
+    }
+}
+/* Button */

@@ -1,0 +1,75 @@
+/* Extends */
+.e-input {
+    width: 100%;
+    line-height: rem-calc(24);
+    height: rem-calc(24);
+    padding: rem-calc(0 6);
+    box-sizing: border-box;
+
+    color: #404040;
+    //font: 12px/21px $font-base;
+    @include font-size(12);
+
+    border: 1px solid #7f7f7f;
+
+    transition: all 0.3s ease-in-out;
+
+    &:-moz-placeholder {
+        color: #bfbfbf;
+        font-style: italic;
+        font-weight: normal;
+    }
+
+    &::-moz-placeholder {
+        color: #bfbfbf;
+        font-style: italic;
+        font-weight: normal;
+    }
+
+    &::-webkit-input-placeholder {
+        color: #bfbfbf;
+        font-style: italic;
+        font-weight: normal;
+    }
+
+    &:-ms-input-placeholder {
+        color: #bfbfbf;
+        font-style: italic;
+        font-weight: normal;
+    }
+}
+
+.e-fa {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    margin: 0 0 0 -1px;
+    padding: 0 5px;
+    box-sizing: border-box;
+
+    cursor: pointer;
+    font-size: 14px;
+    line-height: rem-calc(22);
+    width: rem-calc(24);
+    vertical-align: top;
+    text-align: center;
+
+    border: 1px solid #7f7f7f;
+    background: #fff;
+}
+
+.e-fa-text {
+    min-width: 25px;
+
+    font-size: 12px;
+    text-align: center;
+}
+
+.e-user-select {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+/* Extends */

@@ -1,0 +1,25 @@
+scss_files: 'frontend/common/scss/**/*.scss'
+
+exclude: 'font-awesome/**'
+
+linters:
+  BorderZero:
+    enabled: false
+
+  HexNotation:
+    style: lowercase
+
+#  StringQuotes:
+#    style: double_quotes
+#  NameFormat:
+#    convention: BEM
+
+  Indentation:
+    width: 4
+
+  PropertySortOrder:
+    order: smacss
+    separate_groups: true
+
+  SelectorFormat:
+    convention: strict_BEM
