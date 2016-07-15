@@ -6,8 +6,8 @@ var Common = window.Common || {};
  *
  * @return {string} - ID
  */
-Common.generateId = function() {
-    return '_' + Math.random().toString(36).substr(2, 12);
+Common.generateId = function () {
+  return '_' + Math.random().toString( 36 ).substr( 2, 12 );
 };
 
 export default Common;

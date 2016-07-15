@@ -11,51 +11,52 @@ import axios from 'axios';
 import store from '../store';
 
 class MyAPI {
-    constructor(route, dispatchers) {
-        this.http = axios;
-        this.route = route;
+  constructor( route, dispatchers ) {
+    this.http  = axios;
+    this.route = route;
 
-        this.dispatchers = dispatchers;
+    this.dispatchers = dispatchers;
+  }
+
+  getItem( id, data ) {
+    if ( !id ) {
+      return;
     }
 
-    getItem( id, data ) {
-        if (!id) return;
+    return this.http.get( `/${this.route}/${id}`, data ).then(
+      response => {
+        store.dispatch( this.dispatchers.get( response.data ) );
+        return response;
+      }
+    );
+  }
 
-        return this.http.get( `/${this.route}/${id}`, data ).then(
-            response => {
-                store.dispatch(this.dispatchers.get(response.data));
-                return response;
-            }
-        );
-    }
+  getCollection( params, data ) {
 
-    getCollection( params, data ) {
-        console.log('sss');
+    return this.http.get( `/${this.route}`, data ).then(
+      response => {
+        store.dispatch( this.dispatchers.list( response.data ) );
+        return response;
+      }
+    );
+  }
 
-        return this.http.get( `/${this.route}`, data ).then(
-            response => {
-                store.dispatch(this.dispatchers.list(response.data));
-                return response;
-            }
-        );
-    }
+  create( newResource ) {
+    return this.http.post( `/${this.route}`, newResource ).then(
+      response => {
+        store.dispatch( this.dispatchers.create( response.data ) );
+        return response;
+      }
+    );
+  }
 
-    create( newResource ) {
-        return this.http.post( `/${this.route}`, newResource ).then(
-            response => {
-                store.dispatch(this.dispatchers.create(response.data));
-                return response;
-            }
-        );
-    }
+  update( updatedResource ) {
+    return this.http.patch( `/${this.route}/${updatedResource.id}`, updatedResource );
+  }
 
-    update( updatedResource ) {
-        return this.http.patch( `/${this.route}/${updatedResource.id}`, updatedResource );
-    }
-
-    deleteItem( id ) {
-        return this.http.delete( `/${this.route}/${id}` );
-    }
+  deleteItem( id ) {
+    return this.http.delete( `/${this.route}/${id}` );
+  }
 }
 
 export default MyAPI;
