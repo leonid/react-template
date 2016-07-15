@@ -57,35 +57,6 @@ export default {
               }
             },
             {
-              path: '/facts/pricelists',
-              title: 'Pricelists',
-              getComponent( location, cb ) {
-                System.import( 'containers/Pricelists' )
-                  .then( loadRoute( cb ) )
-                  .catch( errorLoading );
-              },
-              childRoutes: [
-                {
-                  path: '/facts/pricelists/add',
-                  title: 'Add a pricelist',
-                  getComponent( location, cb ) {
-                    System.import( 'containers/Pricelists/pricelist-new' )
-                      .then( loadRoute( cb ) )
-                      .catch( errorLoading );
-                  }
-                }
-              ]
-            },
-            {
-              path: '/facts/airports',
-              title: 'Airports',
-              getComponent( location, cb ) {
-                System.import( 'containers/Airports' )
-                  .then( loadRoute( cb ) )
-                  .catch( errorLoading );
-              }
-            },
-            {
               path: '/facts/*',
               onEnter: ( {params}, replace ) => replace( '/facts' )
             }

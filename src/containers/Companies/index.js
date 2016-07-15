@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Breadcrumbs from '../../blocks/b-breadcrumbs/js/b-breadcrumbs';
+import Breadcrumbs from 'components/Breadcrumbs';
 import {Link} from 'react-router/es6';
 
 // import Table from '../../components/Table';

@@ -1,0 +1,82 @@
+@import '../../common/scss/variables';
+@import '../../common/scss/mixins';
+
+.b-navigation {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  height: 53px;
+
+  &__root {
+    display: flex;
+
+    &_current .b-navigation__item:first-of-type {
+      display: block;
+    }
+  }
+
+  &__item {
+    color: $link-color-header;
+    display: none;
+    @include font-size(16);
+    line-height: 14px;
+    margin: 0 0;
+    padding: 6px 11px;
+    text-decoration: none;
+
+    &:visited {
+      color: $link-color-header;
+    }
+
+    &::after {
+      display: block;
+      content: attr(title);
+      font-weight: bold;
+      height: 1px;
+      color: transparent;
+      overflow: hidden;
+      visibility: hidden;
+      margin-bottom: -1px;
+    }
+
+    &_dashboard {
+      cursor: pointer;
+      display: block;
+      border-right: 1px solid $color-gray-dark;
+      padding: 1px 18px 1px 0px;
+      margin-right: 20px;
+    }
+
+    &_root {
+      color: $color-black;
+      font-weight: bold;
+
+      .fa,
+      [class^=i-] {
+        font-size: 20px;
+        position: absolute;
+        top: 0;
+        left: 8px;
+        line-height: 26px;
+        height: 26px;
+      }
+    }
+
+    &_with_icon {
+      position: relative;
+      padding-left: 30px;
+    }
+
+    &_selected,
+    &_selected ~ .b-navigation__item {
+      display: block;
+    }
+
+    &_selected,
+    &_selected:visited {
+      background: #BFBFBF;
+      color: $color-black;
+      font-weight: bold;
+    }
+  }
+}
