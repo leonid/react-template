@@ -13,21 +13,21 @@
         background-color: #dae1eb;
     }
 
-    td:hover::after,
-    th:hover::after {
-        position: absolute;
-        top: -5000px;
-        left: 0;
-
-        width: 100%;
-
-        height: 10000px;
-
-        background-color: #dae1eb;
-
-        content: '';
-        z-index: -1;
-    }
+    //td:hover::after,
+  //th:hover::after {
+  //    position: absolute;
+  //    top: -5000px;
+  //    left: 0;
+  //
+  //    width: 100%;
+  //
+  //    height: 10000px;
+  //
+  //    background-color: #dae1eb;
+  //
+  //    content: '';
+  //    z-index: -1;
+  //}
 
     th,
     td {

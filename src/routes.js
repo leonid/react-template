@@ -65,12 +65,12 @@ export default {
       ]
     },
     {
-      path: 'service',
-      title: 'Analytics',
+      path: 'prizes',
+      title: 'Prizes',
       icon: 'fa fa-adjust',
       placeholder: 'Услуги',
       getComponent( location, cb ) {
-        System.import( 'containers/Catalog' )
+        System.import( 'containers/Prize' )
           .then( loadRoute( cb ) )
           .catch( errorLoading );
       },

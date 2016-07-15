@@ -31,7 +31,7 @@ class Navigation extends Component {
 
             let link = React.createElement( Link, {
                 to: route.path,
-                params: route.params,
+                // params: route.params,
                 title: route.title,
                 onClick: (route.path === '/' ? this.props.showDashboard.bind(null, this) : null),
                 className: linkClasses,
